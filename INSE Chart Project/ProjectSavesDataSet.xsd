@@ -13,7 +13,119 @@
   </xs:annotation>
   <xs:element name="ProjectSavesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProjectSavesDataSet" msprop:Generator_UserDSName="ProjectSavesDataSet">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PROJECT" msprop:Generator_TableClassName="ProjectDataTable" msprop:Generator_TableVarName="tableProject" msprop:Generator_TablePropName="Project" msprop:Generator_RowDeletingName="ProjectRowDeleting" msprop:Generator_RowChangingName="ProjectRowChanging" msprop:Generator_RowEvHandlerName="ProjectRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectRowDeleted" msprop:Generator_UserTableName="PROJECT" msprop:Generator_RowChangedName="ProjectRowChanged" msprop:Generator_RowEvArgName="ProjectRowChangeEvent" msprop:Generator_RowClassName="ProjectRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PROJECT_NAME" msprop:Generator_ColumnVarNameInTable="columnPROJECT_NAME" msprop:Generator_ColumnPropNameInRow="PROJECT_NAME" msprop:Generator_ColumnPropNameInTable="PROJECT_NAMEColumn" msprop:Generator_UserColumnName="PROJECT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PROJECT_ID" msprop:Generator_ColumnVarNameInTable="columnPROJECT_ID" msprop:Generator_ColumnPropNameInRow="PROJECT_ID" msprop:Generator_ColumnPropNameInTable="PROJECT_IDColumn" msprop:Generator_UserColumnName="PROJECT_ID" default="">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WORK_ITEM" msprop:Generator_TableClassName="WORK_ITEMDataTable" msprop:Generator_TableVarName="tableWORK_ITEM" msprop:Generator_TablePropName="WORK_ITEM" msprop:Generator_RowDeletingName="WORK_ITEMRowDeleting" msprop:Generator_RowChangingName="WORK_ITEMRowChanging" msprop:Generator_RowEvHandlerName="WORK_ITEMRowChangeEventHandler" msprop:Generator_RowDeletedName="WORK_ITEMRowDeleted" msprop:Generator_UserTableName="WORK_ITEM" msprop:Generator_RowChangedName="WORK_ITEMRowChanged" msprop:Generator_RowEvArgName="WORK_ITEMRowChangeEvent" msprop:Generator_RowClassName="WORK_ITEMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_ID" msprop:Generator_ColumnVarNameInTable="columnITEM_ID" msprop:Generator_ColumnPropNameInRow="ITEM_ID" msprop:Generator_ColumnPropNameInTable="ITEM_IDColumn" msprop:Generator_UserColumnName="ITEM_ID" type="xs:string" />
+              <xs:element name="ITEM_NAME" msprop:Generator_ColumnVarNameInTable="columnITEM_NAME" msprop:Generator_ColumnPropNameInRow="ITEM_NAME" msprop:Generator_ColumnPropNameInTable="ITEM_NAMEColumn" msprop:Generator_UserColumnName="ITEM_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PROJECT" msprop:Generator_ColumnVarNameInTable="columnPROJECT" msprop:Generator_ColumnPropNameInRow="PROJECT" msprop:Generator_ColumnPropNameInTable="PROJECTColumn" msprop:Generator_UserColumnName="PROJECT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PERT_DATA" msprop:Generator_TableClassName="PERT_DATADataTable" msprop:Generator_TableVarName="tablePERT_DATA" msprop:Generator_TablePropName="PERT_DATA" msprop:Generator_RowDeletingName="PERT_DATARowDeleting" msprop:Generator_RowChangingName="PERT_DATARowChanging" msprop:Generator_RowEvHandlerName="PERT_DATARowChangeEventHandler" msprop:Generator_RowDeletedName="PERT_DATARowDeleted" msprop:Generator_UserTableName="PERT_DATA" msprop:Generator_RowChangedName="PERT_DATARowChanged" msprop:Generator_RowEvArgName="PERT_DATARowChangeEvent" msprop:Generator_RowClassName="PERT_DATARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_ID" msprop:Generator_ColumnVarNameInTable="columnITEM_ID" msprop:Generator_ColumnPropNameInRow="ITEM_ID" msprop:Generator_ColumnPropNameInTable="ITEM_IDColumn" msprop:Generator_UserColumnName="ITEM_ID" type="xs:string" />
+              <xs:element name="START" msprop:Generator_ColumnVarNameInTable="columnSTART" msprop:Generator_ColumnPropNameInRow="START" msprop:Generator_ColumnPropNameInTable="STARTColumn" msprop:Generator_UserColumnName="START" type="xs:int" />
+              <xs:element name="L_START" msprop:Generator_ColumnVarNameInTable="columnL_START" msprop:Generator_ColumnPropNameInRow="L_START" msprop:Generator_ColumnPropNameInTable="L_STARTColumn" msprop:Generator_UserColumnName="L_START" type="xs:int" />
+              <xs:element name="FINISH" msprop:Generator_ColumnVarNameInTable="columnFINISH" msprop:Generator_ColumnPropNameInRow="FINISH" msprop:Generator_ColumnPropNameInTable="FINISHColumn" msprop:Generator_UserColumnName="FINISH" type="xs:int" />
+              <xs:element name="L_FINISH" msprop:Generator_ColumnVarNameInTable="columnL_FINISH" msprop:Generator_ColumnPropNameInRow="L_FINISH" msprop:Generator_ColumnPropNameInTable="L_FINISHColumn" msprop:Generator_UserColumnName="L_FINISH" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ARROW" msprop:Generator_TableClassName="ARROWDataTable" msprop:Generator_TableVarName="tableARROW" msprop:Generator_TablePropName="ARROW" msprop:Generator_RowDeletingName="ARROWRowDeleting" msprop:Generator_RowChangingName="ARROWRowChanging" msprop:Generator_RowEvHandlerName="ARROWRowChangeEventHandler" msprop:Generator_RowDeletedName="ARROWRowDeleted" msprop:Generator_UserTableName="ARROW" msprop:Generator_RowChangedName="ARROWRowChanged" msprop:Generator_RowEvArgName="ARROWRowChangeEvent" msprop:Generator_RowClassName="ARROWRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="START_NODE" msprop:Generator_ColumnVarNameInTable="columnSTART_NODE" msprop:Generator_ColumnPropNameInRow="START_NODE" msprop:Generator_ColumnPropNameInTable="START_NODEColumn" msprop:Generator_UserColumnName="START_NODE" type="xs:string" />
+              <xs:element name="END_NODE" msprop:Generator_ColumnVarNameInTable="columnEND_NODE" msprop:Generator_ColumnPropNameInRow="END_NODE" msprop:Generator_ColumnPropNameInTable="END_NODEColumn" msprop:Generator_UserColumnName="END_NODE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GANTT_DATA" msprop:Generator_TableClassName="GANTT_DATADataTable" msprop:Generator_TableVarName="tableGANTT_DATA" msprop:Generator_TablePropName="GANTT_DATA" msprop:Generator_RowDeletingName="GANTT_DATARowDeleting" msprop:Generator_RowChangingName="GANTT_DATARowChanging" msprop:Generator_RowEvHandlerName="GANTT_DATARowChangeEventHandler" msprop:Generator_RowDeletedName="GANTT_DATARowDeleted" msprop:Generator_UserTableName="GANTT_DATA" msprop:Generator_RowChangedName="GANTT_DATARowChanged" msprop:Generator_RowEvArgName="GANTT_DATARowChangeEvent" msprop:Generator_RowClassName="GANTT_DATARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_ID" msprop:Generator_ColumnVarNameInTable="columnITEM_ID" msprop:Generator_ColumnPropNameInRow="ITEM_ID" msprop:Generator_ColumnPropNameInTable="ITEM_IDColumn" msprop:Generator_UserColumnName="ITEM_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="OP_DURATION" msprop:Generator_ColumnVarNameInTable="columnOP_DURATION" msprop:Generator_ColumnPropNameInRow="OP_DURATION" msprop:Generator_ColumnPropNameInTable="OP_DURATIONColumn" msprop:Generator_UserColumnName="OP_DURATION" type="xs:int" minOccurs="0" />
+              <xs:element name="N_DURATION" msprop:Generator_ColumnVarNameInTable="columnN_DURATION" msprop:Generator_ColumnPropNameInRow="N_DURATION" msprop:Generator_ColumnPropNameInTable="N_DURATIONColumn" msprop:Generator_UserColumnName="N_DURATION" type="xs:int" />
+              <xs:element name="P_DURATION" msprop:Generator_ColumnVarNameInTable="columnP_DURATION" msprop:Generator_ColumnPropNameInRow="P_DURATION" msprop:Generator_ColumnPropNameInTable="P_DURATIONColumn" msprop:Generator_UserColumnName="P_DURATION" type="xs:int" minOccurs="0" />
+              <xs:element name="START" msprop:Generator_ColumnVarNameInTable="columnSTART" msprop:Generator_ColumnPropNameInRow="START" msprop:Generator_ColumnPropNameInTable="STARTColumn" msprop:Generator_UserColumnName="START" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WBT_LEAF" msprop:Generator_TableClassName="WBT_LEAFDataTable" msprop:Generator_TableVarName="tableWBT_LEAF" msprop:Generator_TablePropName="WBT_LEAF" msprop:Generator_RowDeletingName="WBT_LEAFRowDeleting" msprop:Generator_RowChangingName="WBT_LEAFRowChanging" msprop:Generator_RowEvHandlerName="WBT_LEAFRowChangeEventHandler" msprop:Generator_RowDeletedName="WBT_LEAFRowDeleted" msprop:Generator_UserTableName="WBT_LEAF" msprop:Generator_RowChangedName="WBT_LEAFRowChanged" msprop:Generator_RowEvArgName="WBT_LEAFRowChangeEvent" msprop:Generator_RowClassName="WBT_LEAFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_ID" msprop:Generator_ColumnVarNameInTable="columnITEM_ID" msprop:Generator_ColumnPropNameInRow="ITEM_ID" msprop:Generator_ColumnPropNameInTable="ITEM_IDColumn" msprop:Generator_UserColumnName="ITEM_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANCH" msprop:Generator_ColumnVarNameInTable="columnBRANCH" msprop:Generator_ColumnPropNameInRow="BRANCH" msprop:Generator_ColumnPropNameInTable="BRANCHColumn" msprop:Generator_UserColumnName="BRANCH" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PROJECT" />
+      <xs:field xpath="mstns:PROJECT_ID" />
+    </xs:unique>
+    <xs:unique name="WORK_ITEM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:WORK_ITEM" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:unique>
+    <xs:unique name="PERT_DATA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PERT_DATA" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:unique>
+    <xs:unique name="GANT_DATAKey1">
+      <xs:selector xpath=".//mstns:GANTT_DATA" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:unique>
+    <xs:unique name="WBT_LEAFKey1">
+      <xs:selector xpath=".//mstns:WBT_LEAF" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:unique>
+    <xs:unique name="WBT_LEAF_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:WBT_LEAF" />
+      <xs:field xpath="mstns:BRANCH" />
+    </xs:unique>
+    <xs:keyref name="FK_WORK_ITEM_WBT_LEAF" refer="WORK_ITEM_Constraint1" msprop:rel_Generator_UserChildTable="WBT_LEAF" msprop:rel_Generator_ChildPropName="GetWBT_LEAFRows" msprop:rel_Generator_UserRelationName="FK_WORK_ITEM_WBT_LEAF" msprop:rel_Generator_ParentPropName="WORK_ITEMRow" msprop:rel_Generator_RelationVarName="relationFK_WORK_ITEM_WBT_LEAF" msprop:rel_Generator_UserParentTable="WORK_ITEM">
+      <xs:selector xpath=".//mstns:WBT_LEAF" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:keyref>
+    <xs:keyref name="FK_WORK_ITEM_GANT_DATA" refer="WORK_ITEM_Constraint1" msprop:rel_Generator_UserChildTable="GANTT_DATA" msprop:rel_Generator_ChildPropName="GetGANTT_DATARows" msprop:rel_Generator_UserRelationName="FK_WORK_ITEM_GANT_DATA" msprop:rel_Generator_ParentPropName="WORK_ITEMRow" msprop:rel_Generator_RelationVarName="relationFK_WORK_ITEM_GANT_DATA" msprop:rel_Generator_UserParentTable="WORK_ITEM">
+      <xs:selector xpath=".//mstns:GANTT_DATA" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:keyref>
+    <xs:keyref name="FK_WORK_ITEM_PERT_DATA" refer="WORK_ITEM_Constraint1" msprop:rel_Generator_UserChildTable="PERT_DATA" msprop:rel_Generator_ChildPropName="GetPERT_DATARows" msprop:rel_Generator_UserRelationName="FK_WORK_ITEM_PERT_DATA" msprop:rel_Generator_ParentPropName="WORK_ITEMRow" msprop:rel_Generator_RelationVarName="relationFK_WORK_ITEM_PERT_DATA" msprop:rel_Generator_UserParentTable="WORK_ITEM">
+      <xs:selector xpath=".//mstns:PERT_DATA" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:keyref>
+    <xs:keyref name="FK_WBT_LEAF_WORK_ITEM" refer="WBT_LEAF_Constraint1" msprop:rel_Generator_UserChildTable="WORK_ITEM" msprop:rel_Generator_ChildPropName="GetWORK_ITEMRows" msprop:rel_Generator_UserRelationName="FK_WBT_LEAF_WORK_ITEM" msprop:rel_Generator_RelationVarName="relationFK_WBT_LEAF_WORK_ITEM" msprop:rel_Generator_UserParentTable="WBT_LEAF" msprop:rel_Generator_ParentPropName="WBT_LEAFRow">
+      <xs:selector xpath=".//mstns:WORK_ITEM" />
+      <xs:field xpath="mstns:ITEM_ID" />
+    </xs:keyref>
+    <xs:keyref name="FK_PROJECT_WORK_ITEM" refer="Constraint1" msprop:rel_Generator_UserChildTable="WORK_ITEM" msprop:rel_Generator_ChildPropName="GetWORK_ITEMRows" msprop:rel_Generator_UserRelationName="FK_PROJECT_WORK_ITEM" msprop:rel_Generator_ParentPropName="PROJECTRow" msprop:rel_Generator_RelationVarName="relationFK_PROJECT_WORK_ITEM" msprop:rel_Generator_UserParentTable="PROJECT">
+      <xs:selector xpath=".//mstns:WORK_ITEM" />
+      <xs:field xpath="mstns:PROJECT" />
+    </xs:keyref>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="PERT_DATA_ARROW1" msdata:parent="PERT_DATA" msdata:child="ARROW" msdata:parentkey="ITEM_ID" msdata:childkey="END_NODE" msprop:Generator_UserChildTable="ARROW" msprop:Generator_ChildPropName="GetARROWRowsByPERT_DATA_ARROW1" msprop:Generator_UserRelationName="PERT_DATA_ARROW1" msprop:Generator_ParentPropName="PERT_DATARowByPERT_DATA_ARROW1" msprop:Generator_RelationVarName="relationPERT_DATA_ARROW1" msprop:Generator_UserParentTable="PERT_DATA" />
+      <msdata:Relationship name="PERT_DATA_ARROW" msdata:parent="PERT_DATA" msdata:child="ARROW" msdata:parentkey="ITEM_ID" msdata:childkey="START_NODE" msprop:Generator_UserChildTable="ARROW" msprop:Generator_ChildPropName="GetARROWRowsByPERT_DATA_ARROW" msprop:Generator_UserRelationName="PERT_DATA_ARROW" msprop:Generator_ParentPropName="PERT_DATARowByPERT_DATA_ARROW" msprop:Generator_RelationVarName="relationPERT_DATA_ARROW" msprop:Generator_UserParentTable="PERT_DATA" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
